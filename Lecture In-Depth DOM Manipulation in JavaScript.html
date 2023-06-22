@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+
+    <style>
+        .myfavbluepara {
+
+            color: white;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+    </div>
+
+    <div class="container">
+        <p id="paraone" class="para">
+
+            <strong>
+                Khuzaima Ahmed
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente esse eligendi eaque modi, unde cumque
+                est
+                quos. Fugit eos a ad repellendus. Nam quaerat reiciendis eum? Totam consequatur blanditiis tenetur!
+            </strong>
+
+
+
+        </p>
+
+
+
+        <p id="paraone" class="para">
+
+            <strong>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente esse eligendi eaque modi, unde cumque
+                est
+                quos. Fugit eos a ad repellendus. Nam quaerat reiciendis eum? Totam consequatur blanditiis tenetur!
+            </strong>
+
+
+
+        </p>
+
+
+        <p id="paraone" class="para">
+
+            <strong>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente esse eligendi eaque modi, unde cumque
+                est
+                quos. Fugit eos a ad repellendus. Nam quaerat reiciendis eum? Totam consequatur blanditiis tenetur!
+            </strong>
+
+
+
+        </p>
+
+
+    </div>
+
+    <script>
+
+
+        var first = document.getElementById("paraone").innerHTML;
+        var second = document.getElementById("paraone").innerText;
+        console.log(first)
+        console.log(second)
+
+
+
+
+        var firstclass = document.getElementsByClassName("para");
+        var secondclass = document.getElementsByClassName("para")[0].innerText;
+        console.log(firstclass[0].innerHTML)
+        console.log(secondclass)
+
+
+
+
+        firstclass[2].style.border = "1px solid green";
+        firstclass[2].style.color = "teal";
+
+
+
+
+
+        firstclass[0].classList.add("myfavbluepara")
+
+
+
+        tagname = document.getElementsByTagName("div");
+
+        createdelement = document.createElement("p");
+        createdelement.innerText = "khuzaima is a good boy";
+        tagname[0].appendChild(createdelement)
+
+        createdelement1 = document.createElement("b");
+        createdelement1.innerText = "Misbah is a good girl";
+        tagname[0].replaceChild(createdelement1, createdelement);
+
+
+
+        // selquery = document.querySelector("container");
+
+
+        // console.log(selquery)
+
+
+
+        selquery = document.querySelectorAll("container");
+
+
+        console.log(selquery)
+
+
+    </script>
+</body>
+
+</html>
